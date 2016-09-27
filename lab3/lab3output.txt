@@ -1,0 +1,2 @@
+Time spent on static array: 8.760000 seconds
+Time spent on dynamic array: 7.960000 seconds
