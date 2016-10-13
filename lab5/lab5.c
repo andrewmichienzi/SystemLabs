@@ -62,41 +62,7 @@ void getInfo (FILE * f, Mark * p)
 {
 	// read two integers from the input file and 
 	// store them in the structure that p points to
-	if(fscanf(f, "%d %d", &(p)->x, &(p)->y) != 2)
-		printf("Error");
-	//printf("%d %d\n", p->x, p->y);
-	/*
-	char * line = NULL;
-	size_t len = 0;
-	int linePtr = 0;
-	ssize_t read;
-	f = fopen(READFILE, "r");
-	if(f == NULL)
-	{
-		printf("File could not be found\n");
-		exit(1);
-	}
-	while((read = getline(&line, &len, f)) != 1)
-	{
-		char * delim;
-		delim = strtok(line, " ");
-		int column = 0;
-		while(delim != NULL)
-		{
-			if(column == 0)
-			{
-				//x coordinate
-				sscanf(delim, "%d", &(p)->x);
-			}
-			else
-			{		
-				//y coordinate
-				sscanf(delim, "%d", &(p)->y);
-			}	
-			column++;
-			delim = strtok(NULL, " ");
-		}	
-*/
+	fscanf(f, "%d %d", &(p)->x, &(p)->y);
 }
 
 void printInfo (FILE * f, Mark item)
