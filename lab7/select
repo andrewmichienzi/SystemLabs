@@ -1,0 +1,14 @@
+#!/bin/bash>
+$var = ( stdin ) 
+echo $var
+#read input
+#echo " hey there $input"
+#IFS=' ' read -ra delim <<< "$input"
+#for i in "${delim[@]};
+#do
+#	if [[ $i == *"/" ]]
+#	then
+#		echo $i
+#	fi	
+#done
+

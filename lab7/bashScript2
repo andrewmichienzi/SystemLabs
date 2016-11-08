@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#1
+currTime=$(date "+%r")
+echo "Current time is $currTime"
+echo " "
+
+# 2
+input="./classes.txt"
+while IFS= read -r line
+do
+	IFS=' ' read -ra delim <<< "$line"
+	echo "${delim[0]}"			#prints course number
+	eval "mkdir -p ${delim[0]}"		#creates a directory for said course number
+	eval "touch ${delim[0]}/${delim[1]}"	#Creates project file in said directory
+done < "$input"
+
+#3
+
